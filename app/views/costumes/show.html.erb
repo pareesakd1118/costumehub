@@ -5,4 +5,8 @@
 
 <%= link_to "Edit", edit_costume_path(@costume) %>
 
-<%= link_to "Delete", 
+<%= link_to "Delete", costume_path(@costume), data: {
+turbo_method: :delete,
+turbo_confirm: "Are you sure?"
+} %>
+
