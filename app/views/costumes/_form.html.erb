@@ -1,0 +1,22 @@
+
+<%= form_with model: @costume do |form|%>
+
+    <div> 
+        <%= form.label :name %>
+        <%= form.text_field :name, placeholder: "Enter costume name" %>
+    </div>
+
+    <div> 
+        <%= form.label :category %>
+        <%= form.select :category, ["spooky", "funny", "historical", "pun", "cute", "fantasy", "animal", "sexy", "super hero", "pop culture"], prompt: "Select a category" %> 
+    </div>
+
+    <div>
+        <%= form.label :description %>
+        <%= form.text_area :description, placeholder: "Describe costume and necessary materials" %>
+    </div>
+
+    <div>
+        <%= form.submit %>
+    </div>
+<% end %>

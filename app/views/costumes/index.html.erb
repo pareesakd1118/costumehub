@@ -1,0 +1,14 @@
+<% if @costumes.present? %>
+<h1>Your have <%= Costume.costume_count %> <% if @costumes.length == 1 %> costume <% else %> costumes <% end %> in your list </h1>
+
+<%= link_to "Create new Costume", new_costume_path %>
+
+<% else %>
+<h1>You dont have any costumes yet :/ </h1>
+<%= link_to "Add first costume", new_costume_path %>
+
+<% end %>
+
+<% @costumes.each do |costume| %>
+    <%= render "costume", costume: costume %>
+<% end %>
